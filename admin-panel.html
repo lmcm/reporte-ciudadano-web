@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ayuntamiento de Boca del Río - Panel de Control</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --tw-bg-opacity: 1;
+            --primary-color: #0c7ff2;
+            --background-color: #f8fafc;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+        }
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+        }
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            text-transform: capitalize;
+        }
+        .status-pending {
+            background-color: #fffbeb;
+            color: #b45309;
+        }
+        .status-in-progress {
+            background-color: #eff6ff;
+            color: #2563eb;
+        }
+        .status-completed {
+            background-color: #f0fdf4;
+            color: #16a34a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex min-h-screen flex-col bg-slate-50">
+        <header
+            class="sticky top-0 z-10 flex items-center justify-between border-b border-[var(--border-color)] bg-white px-6 py-4 shadow-sm">
+            <div class="flex items-center gap-4">
+                <div class="text-[var(--primary-color)]">
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2L2 7l10 5 10-5L12 2zm0 7.5L4 5.5l8-4 8 4-8 4zM2 17l10 5 10-5-10-5-10 5zm0-2.5l8 4 8-4-8-4-8 4z">
+                        </path>
+                    </svg>
+                </div>
+                <h1 class="text-xl font-bold text-slate-800">Ayuntamiento de Boca del Río</h1>
+            </div>
+            <nav class="flex items-center gap-6">
+                <a class="text-sm font-semibold text-[var(--primary-color)]" href="#">Reportes</a>
+                <a class="text-sm font-medium text-slate-600 hover:text-[var(--primary-color)]"
+                    href="#">Estadísticas</a>
+                <a class="text-sm font-medium text-slate-600 hover:text-[var(--primary-color)]" href="#">Usuarios</a>
+                <div class="ml-4 flex items-center gap-4">
+                    <button class="relative rounded-full p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-700">
+                        <span class="material-icons-outlined">notifications</span>
+                        <span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-red-500"></span>
+                    </button>
+                    <img alt="User avatar" class="h-10 w-10 rounded-full"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoRwLcmsLGQU7FfYkkhFTQIKXoVxzBn1ezSBI-Ff7oSRXwsq4VzJSBKwsLPwszCRrMbSZQ04WBstK-ji14V1MJtU1nChbu7LYGLS6A3CNmdOq7LJy-RGW3EFSqT1732jsWC38f-TLN2L41k8QT5y1RD3JyXlcbXFlT9iYx_APfw6GnuYkifRJQuq8jDCXSmCxVLuGKtLvAy1ZWOAFIuPpEvIWumAwGTJU_0Ba9v5LJ6kK91OmicBjy4s8id5WLz8PXGS0T0Yv8bWQa" />
+                </div>
+            </nav>
+        </header>
+        <main class="flex-1 bg-gray-50 p-6 lg:p-10">
+            <div class="mx-auto max-w-7xl">
+                <div class="mb-8 flex flex-wrap items-center justify-between gap-4">
+                    <h2 class="text-3xl font-bold text-slate-900">Reportes Ciudadanos</h2>
+                    <button
+                        class="flex items-center gap-2 rounded-md bg-[var(--primary-color)] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-opacity-90">
+                        <span class="material-icons-outlined text-base">add</span>
+                        <span>Nuevo Reporte</span>
+                    </button>
+                </div>
+                <div
+                    class="mb-6 flex flex-wrap items-center gap-4 rounded-lg border border-[var(--border-color)] bg-white p-4">
+                    <h3 class="text-sm font-medium text-slate-600">Filtros:</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <div class="relative">
+                            <select
+                                class="appearance-none rounded-md border border-gray-300 bg-white py-2 pl-3 pr-8 text-sm text-slate-700 focus:border-[var(--primary-color)] focus:outline-none focus:ring-1 focus:ring-[var(--primary-color)]">
+                                <option>Estado: Todos</option>
+                                <option>Pendiente</option>
+                                <option>En Progreso</option>
+                                <option>Completado</option>
+                            </select>
+                            <span
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-gray-500">
+                                <span class="material-icons-outlined text-base">expand_more</span>
+                            </span>
+                        </div>
+                        <div class="relative">
+                            <select
+                                class="appearance-none rounded-md border border-gray-300 bg-white py-2 pl-3 pr-8 text-sm text-slate-700 focus:border-[var(--primary-color)] focus:outline-none focus:ring-1 focus:ring-[var(--primary-color)]">
+                                <option>Colonia: Todas</option>
+                                <option>Adalberto Tejeda</option>
+                                <option>Ampliación Miguel Alemán</option>
+                                <option>Benito Juárez</option>
+                                <option>Carranza</option>
+                                <option>Centro</option>
+                                <option>Colonia Ejido</option>
+                                <option>Costa de Oro</option>
+                                <option>El Morro</option>
+                                <option>Fraccionamiento La Tampiquera</option>
+                                <option>Fraccionamiento Las Vegas</option>
+                                <option>Fraccionamiento Los Delfines</option>
+                                <option>Fraccionamiento Playas del Conchal</option>
+                                <option>Fraccionamiento Villa Rica</option>
+                                <option>Ricardo Flores Magón</option>
+                                <option>Vicente Fox</option>
+                            </select>
+                            <span
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-gray-500">
+                                <span class="material-icons-outlined text-base">expand_more</span>
+                            </span>
+                        </div>
+                        <div class="relative">
+                            <select
+                                class="appearance-none rounded-md border border-gray-300 bg-white py-2 pl-3 pr-8 text-sm text-slate-700 focus:border-[var(--primary-color)] focus:outline-none focus:ring-1 focus:ring-[var(--primary-color)]">
+                                <option>Tipo: Todos</option>
+                                <option>Reparación de luminaria</option>
+                                <option>Fuga de agua</option>
+                                <option>Recolección de basura</option>
+                                <option>Reparación de baches</option>
+                            </select>
+                            <span
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-gray-500">
+                                <span class="material-icons-outlined text-base">expand_more</span>
+                            </span>
+                        </div>
+                        <div class="relative">
+                            <input
+                                class="rounded-md border border-gray-300 bg-white py-2 px-3 text-sm text-slate-700 focus:border-[var(--primary-color)] focus:outline-none focus:ring-1 focus:ring-[var(--primary-color)]"
+                                type="date" />
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow-x-auto rounded-lg border border-[var(--border-color)] bg-white shadow-sm">
+                    <table class="w-full text-left text-sm text-slate-700">
+                        <thead class="bg-slate-50 text-xs uppercase text-slate-500">
+                            <tr>
+                                <th class="px-6 py-3 font-medium" scope="col">Folio</th>
+                                <th class="px-6 py-3 font-medium" scope="col">Tipo de Servicio</th>
+                                <th class="px-6 py-3 font-medium" scope="col">Estado</th>
+                                <th class="px-6 py-3 font-medium" scope="col">Fecha de Creación</th>
+                                <th class="px-6 py-3 font-medium text-center" scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-[var(--border-color)] bg-white hover:bg-slate-50">
+                                <td class="px-6 py-4 font-medium text-slate-900">#20240001</td>
+                                <td class="px-6 py-4">Reparación de luminaria</td>
+                                <td class="px-6 py-4"><span class="status-badge status-in-progress">En Progreso</span>
+                                </td>
+                                <td class="px-6 py-4 text-slate-600">2024-01-15</td>
+                                <td class="px-6 py-4 text-center"><button
+                                        class="text-sm font-medium text-[var(--primary-color)] hover:underline">Ver
+                                        Detalles</button></td>
+                            </tr>
+                            <tr class="border-b border-[var(--border-color)] bg-white hover:bg-slate-50">
+                                <td class="px-6 py-4 font-medium text-slate-900">#20240002</td>
+                                <td class="px-6 py-4">Fuga de agua</td>
+                                <td class="px-6 py-4"><span class="status-badge status-completed">Completado</span></td>
+                                <td class="px-6 py-4 text-slate-600">2024-01-16</td>
+                                <td class="px-6 py-4 text-center"><button
+                                        class="text-sm font-medium text-[var(--primary-color)] hover:underline">Ver
+                                        Detalles</button></td>
+                            </tr>
+                            <tr class="border-b border-[var(--border-color)] bg-white hover:bg-slate-50">
+                                <td class="px-6 py-4 font-medium text-slate-900">#20240003</td>
+                                <td class="px-6 py-4">Recolección de basura</td>
+                                <td class="px-6 py-4"><span class="status-badge status-pending">Pendiente</span></td>
+                                <td class="px-6 py-4 text-slate-600">2024-01-17</td>
+                                <td class="px-6 py-4 text-center"><button
+                                        class="text-sm font-medium text-[var(--primary-color)] hover:underline">Ver
+                                        Detalles</button></td>
+                            </tr>
+                            <tr class="border-b border-[var(--border-color)] bg-white hover:bg-slate-50">
+                                <td class="px-6 py-4 font-medium text-slate-900">#20240004</td>
+                                <td class="px-6 py-4">Reparación de baches</td>
+                                <td class="px-6 py-4"><span class="status-badge status-in-progress">En Progreso</span>
+                                </td>
+                                <td class="px-6 py-4 text-slate-600">2024-01-18</td>
+                                <td class="px-6 py-4 text-center"><button
+                                        class="text-sm font-medium text-[var(--primary-color)] hover:underline">Ver
+                                        Detalles</button></td>
+                            </tr>
+                            <tr class="border-b border-[var(--border-color)] bg-white hover:bg-slate-50">
+                                <td class="px-6 py-4 font-medium text-slate-900">#20240005</td>
+                                <td class="px-6 py-4">Reparación de luminaria</td>
+                                <td class="px-6 py-4"><span class="status-badge status-completed">Completado</span></td>
+                                <td class="px-6 py-4 text-slate-600">2024-01-19</td>
+                                <td class="px-6 py-4 text-center"><button
+                                        class="text-sm font-medium text-[var(--primary-color)] hover:underline">Ver
+                                        Detalles</button></td>
+                            </tr>
+                            <tr class="border-b border-[var(--border-color)] bg-white hover:bg-slate-50">
+                                <td class="px-6 py-4 font-medium text-slate-900">#20240006</td>
+                                <td class="px-6 py-4">Fuga de agua</td>
+                                <td class="px-6 py-4"><span class="status-badge status-pending">Pendiente</span></td>
+                                <td class="px-6 py-4 text-slate-600">2024-01-20</td>
+                                <td class="px-6 py-4 text-center"><button
+                                        class="text-sm font-medium text-[var(--primary-color)] hover:underline">Ver
+                                        Detalles</button></td>
+                            </tr>
+                            <tr class="border-b border-[var(--border-color)] bg-white hover:bg-slate-50">
+                                <td class="px-6 py-4 font-medium text-slate-900">#20240007</td>
+                                <td class="px-6 py-4">Recolección de basura</td>
+                                <td class="px-6 py-4"><span class="status-badge status-in-progress">En Progreso</span>
+                                </td>
+                                <td class="px-6 py-4 text-slate-600">2024-01-21</td>
+                                <td class="px-6 py-4 text-center"><button
+                                        class="text-sm font-medium text-[var(--primary-color)] hover:underline">Ver
+                                        Detalles</button></td>
+                            </tr>
+                            <tr class="border-b border-[var(--border-color)] bg-white hover:bg-slate-50">
+                                <td class="px-6 py-4 font-medium text-slate-900">#20240008</td>
+                                <td class="px-6 py-4">Reparación de baches</td>
+                                <td class="px-6 py-4"><span class="status-badge status-completed">Completado</span></td>
+                                <td class="px-6 py-4 text-slate-600">2024-01-22</td>
+                                <td class="px-6 py-4 text-center"><button
+                                        class="text-sm font-medium text-[var(--primary-color)] hover:underline">Ver
+                                        Detalles</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <nav aria-label="Table navigation" class="mt-6 flex items-center justify-between">
+                    <span class="text-sm font-normal text-slate-500">Mostrando <span
+                            class="font-semibold text-slate-900">1-8</span> de <span
+                            class="font-semibold text-slate-900">100</span></span>
+                    <ul class="inline-flex h-8 -space-x-px text-sm">
+                        <li>
+                            <a class="ml-0 flex h-8 items-center justify-center rounded-l-lg border border-gray-300 bg-white px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                                href="#">Anterior</a>
+                        </li>
+                        <li>
+                            <a class="flex h-8 items-center justify-center border border-gray-300 bg-white px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                                href="#">1</a>
+                        </li>
+                        <li>
+                            <a class="flex h-8 items-center justify-center border border-gray-300 bg-white px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                                href="#">2</a>
+                        </li>
+                        <li>
+                            <a class="flex h-8 items-center justify-center border border-gray-300 bg-white px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                                href="#">...</a>
+                        </li>
+                        <li>
+                            <a class="flex h-8 items-center justify-center rounded-r-lg border border-gray-300 bg-white px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                                href="#">Siguiente</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

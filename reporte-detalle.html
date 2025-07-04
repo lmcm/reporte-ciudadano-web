@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Detalles del Reporte - CityConnect</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root {
+      --primary-color: #0c7ff2;
+      --primary-color-hover: #0a6bcf;
+      --text-primary: #111827;
+      --text-secondary: #6b7280;
+      --background-color: #f9fafb;
+      --input-border-color: #d1d5db;
+      --input-focus-border-color: #0c7ff2;
+    }
+    body {
+      font-family: 'Public Sans', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+  <div class="flex flex-col min-h-screen">
+    <header class="bg-white shadow-sm">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-4">
+            <svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+            </svg>
+            <h1 class="text-xl font-bold">CityConnect Boca del Río</h1>
+          </div>
+          <nav class="hidden md:flex items-center gap-8">
+            <a class="text-sm font-medium text-gray-600 hover:text-[var(--primary-color)]" href="#">Panel</a>
+            <a class="text-sm font-medium text-[var(--primary-color)] border-b-2 border-[var(--primary-color)] pb-1"
+              href="#">Reportes</a>
+            <a class="text-sm font-medium text-gray-600 hover:text-[var(--primary-color)]" href="#">Usuarios</a>
+          </nav>
+          <div class="flex items-center gap-4">
+            <button class="relative">
+              <span class="material-icons-outlined text-gray-600">notifications</span>
+              <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+              </span>
+            </button>
+            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvh128m3DzLuKW4KCOM62eraXokcfuAyF6uulYQGryNaAo5u4y-x9OypSGClwOMEVLGfgDI-T0WLEhZxZhU9ZE_AcWyaiYM64L6K60Q-FbsdGvu6ANblwwLnX74wHsoEH3jKme7EKfYKQU9GEVxPrwcI-WDPa_SM5B4jNXavYgpoRXUuPSPNrA3AwbyZcjZjVCAgLUYg-T48-rwM9mqlrz4fUthbsf48LcA7N7I_2CtChqSGREXmUPjAbWoowJTvwa5t3_PcfTDcD8");'>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-6">
+          <nav aria-label="Breadcrumb" class="flex">
+            <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+              <li class="inline-flex items-center">
+                <a class="inline-flex items-center text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)]"
+                  href="#">
+                  <span class="material-icons-outlined mr-2">folder</span>
+                  Reportes
+                </a>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <span class="material-icons-outlined text-gray-400 text-sm">chevron_right</span>
+                  <span class="ms-1 text-sm font-medium text-[var(--text-primary)] md:ms-2">Detalles del Reporte</span>
+                </div>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold tracking-tight">Reporte #12345</h2>
+            <p class="text-[var(--text-secondary)] mt-1">Vea y gestione los detalles de esta solicitud de servicio.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+            <div>
+              <label class="block text-sm font-medium text-[var(--text-primary)] pb-1.5" for="report-id">ID de
+                Reporte</label>
+              <input
+                class="form-input w-full rounded-md border-[var(--input-border-color)] bg-gray-50 text-[var(--text-primary)] focus:ring-[var(--input-focus-border-color)] focus:border-[var(--input-focus-border-color)]"
+                disabled="" id="report-id" type="text" value="12345" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-[var(--text-primary)] pb-1.5" for="report-date">Fecha del
+                Reporte</label>
+              <input
+                class="form-input w-full rounded-md border-[var(--input-border-color)] bg-gray-50 text-[var(--text-primary)] focus:ring-[var(--input-focus-border-color)] focus:border-[var(--input-focus-border-color)]"
+                disabled="" id="report-date" type="text" value="18-05-2024" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-[var(--text-primary)] pb-1.5" for="report-type">Tipo de
+                Reporte</label>
+              <input
+                class="form-input w-full rounded-md border-[var(--input-border-color)] bg-gray-50 text-[var(--text-primary)] focus:ring-[var(--input-focus-border-color)] focus:border-[var(--input-focus-border-color)]"
+                disabled="" id="report-type" type="text" value="Reparación de Bache" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-[var(--text-primary)] pb-1.5"
+                for="location">Ubicación</label>
+              <input
+                class="form-input w-full rounded-md border-[var(--input-border-color)] bg-gray-50 text-[var(--text-primary)] focus:ring-[var(--input-focus-border-color)] focus:border-[var(--input-focus-border-color)]"
+                disabled="" id="location" type="text" value="Av. Independencia 123, Centro, Boca del Río, Ver." />
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium text-[var(--text-primary)] pb-1.5"
+                for="description">Descripción</label>
+              <textarea
+                class="form-textarea w-full rounded-md border-[var(--input-border-color)] bg-gray-50 text-[var(--text-primary)] focus:ring-[var(--input-focus-border-color)] focus:border-[var(--input-focus-border-color)]"
+                disabled="" id="description"
+                rows="4">Bache grande en medio de la calle, causando problemas de tráfico y daños potenciales a los vehículos.</textarea>
+            </div>
+            <hr class="md:col-span-2 my-2" />
+            <div>
+              <label class="block text-sm font-medium text-[var(--text-primary)] pb-1.5" for="status">Estado</label>
+              <select
+                class="form-select w-full rounded-md border-[var(--input-border-color)] text-[var(--text-primary)] focus:ring-[var(--input-focus-border-color)] focus:border-[var(--input-focus-border-color)]"
+                id="status">
+                <option>Recibido</option>
+                <option selected="">En Progreso</option>
+                <option>Completado</option>
+                <option>Cancelado</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-[var(--text-primary)] pb-1.5"
+                for="assigned-personnel">Personal Asignado</label>
+              <select
+                class="form-select w-full rounded-md border-[var(--input-border-color)] text-[var(--text-primary)] focus:ring-[var(--input-focus-border-color)] focus:border-[var(--input-focus-border-color)]"
+                id="assigned-personnel">
+                <option>Sin Asignar</option>
+                <option selected="">Equipo de Obras Públicas A</option>
+                <option>Equipo de Obras Públicas B</option>
+                <option>Servicios de Contratista</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-end">
+            <button
+              class="inline-flex items-center justify-center rounded-md bg-[var(--primary-color)] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[var(--primary-color-hover)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2"
+              type="button">
+              <span class="material-icons-outlined mr-2 text-base">save</span>
+              Guardar Cambios
+            </button>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8 mt-8">
+          <h3 class="text-xl font-bold tracking-tight mb-4">Historial de Actualizaciones</h3>
+          <div class="border-l-2 border-gray-200 ml-2">
+            <div class="relative pl-8 pb-8">
+              <div class="absolute left-[-9px] top-[5px] h-4 w-4 rounded-full bg-blue-500"></div>
+              <p class="font-semibold text-gray-800">Completado</p>
+              <p class="text-sm text-gray-500">22 de Mayo, 2024</p>
+            </div>
+            <div class="relative pl-8 pb-8">
+              <div class="absolute left-[-9px] top-[5px] h-4 w-4 rounded-full bg-blue-500"></div>
+              <p class="font-semibold text-gray-800">En Progreso</p>
+              <p class="text-sm text-gray-500">19 de Mayo, 2024</p>
+            </div>
+            <div class="relative pl-8">
+              <div class="absolute left-[-9px] top-[5px] h-4 w-4 rounded-full bg-blue-500"></div>
+              <p class="font-semibold text-gray-800">Recibido</p>
+              <p class="text-sm text-gray-500">18 de Mayo, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8 mt-8">
+          <h3 class="text-xl font-bold tracking-tight mb-6">Comentarios</h3>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                style='background-image: url("https://lh3.googleusercontent.com/a-/ACNPEu_RmyC1Q5B-orP1AATv_ip-2I80-4LwBty-vjQj=s96-c");'>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold text-gray-900">Juan Pérez (Ciudadano)</p>
+                  <p class="text-sm text-gray-500">20 de Mayo, 2024</p>
+                </div>
+                <p class="text-gray-700 mt-1">Gracias por la rápida respuesta. ¿Hay alguna estimación de cuándo podría
+                  estar resuelto?</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvh128m3DzLuKW4KCOM62eraXokcfuAyF6uulYQGryNaAo5u4y-x9OypSGClwOMEVLGfgDI-T0WLEhZxZhU9ZE_AcWyaiYM64L6K60Q-FbsdGvu6ANblwwLnX74wHsoEH3jKme7EKfYKQU9GEVxPrwcI-WDPa_SM5B4jNXavYgpoRXUuPSPNrA3AwbyZcjZjVCAgLUYg-T48-rwM9mqlrz4fUthbsf48LcA7N7I_2CtChqSGREXmUPjAbWoowJTvwa5t3_PcfTDcD8");'>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold text-gray-900">Ana García (Ayuntamiento)</p>
+                  <p class="text-sm text-gray-500">21 de Mayo, 2024</p>
+                </div>
+                <p class="text-gray-700 mt-1">Hola Juan, el equipo ya está trabajando en ello. Esperamos que quede
+                  resuelto en las próximas 24-48 horas. Gracias por su paciencia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8">
+            <h4 class="text-lg font-semibold mb-3">Agregar un comentario</h4>
+            <div class="flex gap-4">
+              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvh128m3DzLuKW4KCOM62eraXokcfuAyF6uulYQGryNaAo5u4y-x9OypSGClwOMEVLGfgDI-T0WLEhZxZhU9ZE_AcWyaiYM64L6K60Q-FbsdGvu6ANblwwLnX74wHsoEH3jKme7EKfYKQU9GEVxPrwcI-WDPa_SM5B4jNXavYgpoRXUuPSPNrA3AwbyZcjZjVCAgLUYg-T48-rwM9mqlrz4fUthbsf48LcA7N7I_2CtChqSGREXmUPjAbWoowJTvwa5t3_PcfTDcD8");'>
+              </div>
+              <div class="flex-1">
+                <textarea
+                  class="form-textarea w-full rounded-md border-[var(--input-border-color)] text-[var(--text-primary)] focus:ring-[var(--input-focus-border-color)] focus:border-[var(--input-focus-border-color)]"
+                  placeholder="Escribe tu comentario aquí..." rows="3"></textarea>
+                <div class="mt-3 flex justify-end">
+                  <button
+                    class="inline-flex items-center justify-center rounded-md bg-[var(--primary-color)] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[var(--primary-color-hover)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2"
+                    type="button">
+                    <span class="material-icons-outlined mr-2 text-base">send</span>
+                    Enviar Comentario
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-sm text-gray-500">
+        <p>© 2024 CityConnect - H. Ayuntamiento de Boca del Río, Veracruz. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>
