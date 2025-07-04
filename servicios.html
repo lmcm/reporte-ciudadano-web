@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>City Connect - Servicios Realizados</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --brand-primary: #022c56;
+            --brand-secondary: #e0f2fe;
+            --brand-accent: #facc15;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --surface-background: #f8fafc;
+            --border-color: #e5e7eb;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-public-sans {
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-surface-background text-text-primary">
+    <div class="flex flex-col min-h-screen">
+        <header class="bg-white shadow-sm sticky top-0 z-10">
+            <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="text-brand-primary size-8">
+                        <svg class="size-8 text-blue-600" fill="none" viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-slate-900 text-xl font-bold leading-tight tracking-[-0.015em]">Boca del Río</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="text-slate-600 text-base font-medium leading-normal hover:text-blue-600 transition-colors"
+                        href="./index.html">Inicio</a>
+                    <a class="text-slate-600 text-base font-medium leading-normal hover:text-blue-600 transition-colors"
+                        href="./servicios.html">Servicios</a>
+                    <a class="text-slate-600 text-base font-medium leading-normal hover:text-blue-600 transition-colors"
+                        href="./mis-reportes.html">Mis Reportes</a>
+                    <a class="text-slate-600 text-base font-medium leading-normal hover:text-blue-600 transition-colors"
+                        href="#">Contacto</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <button class="relative p-2 rounded-full hover:bg-brand-secondary transition-colors">
+                        <svg class="text-text-secondary" fill="currentColor" height="24px" viewBox="0 0 256 256"
+                            width="24px" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z">
+                            </path>
+                        </svg>
+                        <span class="absolute top-2 right-2 block h-2 w-2 rounded-full bg-red-500"></span>
+                    </button>
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-brand-secondary"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBk3z5wdF75R8xLO1jCL85gICvQiqavXbmbw4du4kabMtgREtIuK1l_2rLiRBNriLMO2ozztYO44JiIdOKfQ1HCuEjt5Op4kSdKV9YqlWLkP67CqIT-bIVxx_fw244gMsHqe7v9sY43F3dbhF3kQxSoBZkKqSnPeucjRbpVvWZgDJ06kR2P6-2WN_E-oN5L3PwsmFLpy2QCQS0D0Rhp8tOlXi1gUJ9oJ7f_ZzVLKof3hxiDdOpyLASOTIUEm6Df4cqDOyjOpuEprmOD");'>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow container mx-auto px-6 py-12">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-brand-primary tracking-tight font-public-sans">Servicios Realizados
+                </h2>
+                <p class="mt-3 text-lg text-text-secondary max-w-2xl mx-auto">Consulta los reportes de servicios que han
+                    sido atendidos gracias a la participación ciudadana en Boca del Río.</p>
+            </div>
+            <div class="space-y-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-shadow hover:shadow-lg">
+                    <div class="p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-1">
+                                <h3 class="text-xl font-semibold text-brand-primary mb-2">Reparación de Calle</h3>
+                                <div class="flex items-center text-text-secondary text-sm mb-2">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Calle Principal, Boca del Río</span>
+                                </div>
+                                <div class="flex items-center text-text-secondary text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Completado: 15 de Enero, 2024</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <img alt="Calle antes de la reparación"
+                                        class="w-full h-48 object-cover rounded-md border border-border-color"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpPWhysEbFzRnsXT7Aqg_CjI5IOTL2JB0hJL34A_lfggw0hF8YAFFrU-GCMPJT_p1bDCZS6e3Se6RJpITpAF-RHu-9EM5pPU6fCH-O3M4COz7ebYNh1slP-ktAJlxLAGi-YX9ZE3kP3MHrmEBT_NEehsBuTA2OuM0DfgANQ5AJ_h1MtFwR-UkglYgWTlKVmqG1HE52lc5y7I03Nq71CjVNTmS5h01JijhYhoZwvDCOnJg8k-QqJ8NwrIoUuEukG6QG6Xv9sDc9C0yj" />
+                                    <p class="text-center text-sm font-medium text-text-secondary mt-2">Antes</p>
+                                </div>
+                                <div>
+                                    <img alt="Calle después de la reparación"
+                                        class="w-full h-48 object-cover rounded-md border-2 border-green-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzsgJflGJZvM9ico0weeHlRw3NzDqm0AupQbbLIXfj7J1k-kJ4E9jQRU5G9AVTLRQ42o-PBslgUxyIO2mRUfp8boL8In53SAzRFulXBCXoKhVG5cvvvBz4ArVF3gb4kATGfSTq_kKMYuLJSYa6Gyss-vvX3gmmfrPz4rjgDqbcXSwnhU6qznxq1lJkSjMLXdQyK79XqN_J5JWKnsXZuISgdRahYAdr-l7LoC189jDVJWzq2rKprvP5X0Vq7JHPiqcuN8DIkMTahgzh" />
+                                    <p class="text-center text-sm font-semibold text-green-700 mt-2">Después</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-shadow hover:shadow-lg">
+                    <div class="p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-1">
+                                <h3 class="text-xl font-semibold text-brand-primary mb-2">Limpieza de Parque</h3>
+                                <div class="flex items-center text-text-secondary text-sm mb-2">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Parque Central, Boca del Río</span>
+                                </div>
+                                <div class="flex items-center text-text-secondary text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Completado: 20 de Febrero, 2024</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <img alt="Parque antes de la limpieza"
+                                        class="w-full h-48 object-cover rounded-md border border-border-color"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGiiIN2mzt6LmSE0INDju2SporHkuv-PfpmyNDhlIrkRXWLvoovZmArjdzHJmE-9GKz1rTInQ7PkjUqCgftComuegfwYhPEtVCGumqPZUsP_k1Ykp6XeiAa5maH9OTvigRXjVuQj2W9xCDKsfsz7jJAspDk_m1q95WMkHIl7x1WSPojVIo_wE6kWScE5qCwmdohBOPn4qLrJYxxiL8j1BiRbMkEQh3c-3WWbNHp8BtWczqSbCuyOfQ7KggzB4FAW3Fuj_8LcBXkxeX" />
+                                    <p class="text-center text-sm font-medium text-text-secondary mt-2">Antes</p>
+                                </div>
+                                <div>
+                                    <img alt="Parque después de la limpieza"
+                                        class="w-full h-48 object-cover rounded-md border-2 border-green-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDcvoCbtyakpQN8ayAf2JlHF60vIUILAYejO7gyimklHPAKzW2PINjiTwY_j9Ko45ken-xisCQQdauA1DWiPbV6FKbNj7fZqK5lMwBS1Er2_OHzT5pYt9Gtv47HSzFgp9N-iS76Hs4Jqq6v-dMvKnH-zxoJDq-ej3alsTnP0rk4r_BiMpvIE39k0W0tSGbo2cQZKqHGRQMcDPOu-wN2pXodS1_Slbse945HIiDwt5iFa-HyLsz0b1Ds6RHk6YsUxHF3mLbNylN-r0a" />
+                                    <p class="text-center text-sm font-semibold text-green-700 mt-2">Después</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-shadow hover:shadow-lg">
+                    <div class="p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-1">
+                                <h3 class="text-xl font-semibold text-brand-primary mb-2">Reparación de Alumbrado</h3>
+                                <div class="flex items-center text-text-secondary text-sm mb-2">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Avenida de las Palmas, Boca del Río</span>
+                                </div>
+                                <div class="flex items-center text-text-secondary text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Completado: 10 de Marzo, 2024</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <img alt="Alumbrado antes de la reparación"
+                                        class="w-full h-48 object-cover rounded-md border border-border-color"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHxPRIQQcHjAxfrYRvsPHzQfnxDMSEKD-BJwBDgUe6lenyP-1x9ETld7R7ngBmBVNITGlcPS_DBoaJyBPk6BfI-di6U1VP-O03uQbRTdCp4OyGlGz-0K6OS1NBQzFEQMDJZkJiJ2d8D58f4l3mglbfvOGpZwbLUVwNPq8OL8Ya9GSDv6kfOYJkJJ0WwJm35NhV2gfFhbjR08BOPrMnVG13Feb4HJZwhP8mKjbc5g_MplreqGe39meNLpUzmQaBQzIXTWuP0GBEY1z6" />
+                                    <p class="text-center text-sm font-medium text-text-secondary mt-2">Antes</p>
+                                </div>
+                                <div>
+                                    <img alt="Alumbrado después de la reparación"
+                                        class="w-full h-48 object-cover rounded-md border-2 border-green-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUcyQ0Umneo5a6_FFl7bYxxvjJ99BxkQhs5c6a8m9rFY9W-xNSkueALiihb2AfkCV-CyVieLn_6ILw_eewMioaqGknjXr1b0lJo4TddXq_T5_p25uxv5AXR0Faw47SCSdnkCWR8l6S4jH5sRh2A_1oC7dfXLSPVgz3ovhOHJ5BCnSv665rHeMKMWBYm2_mCfBrI8E1XjuChyNDruvTOpmDmAkj_wFIPT7EcXjvyHDZzK206DMIDV74SO7t1xsEn6kNZUt9PC5xLj-i" />
+                                    <p class="text-center text-sm font-semibold text-green-700 mt-2">Después</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-white mt-12 border-t border-border-color">
+            <div class="container mx-auto px-6 py-6 text-center text-text-secondary text-sm">
+                <p>© 2024 City Connect Boca del Río. Todos los Derechos Reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
